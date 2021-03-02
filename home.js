@@ -27,7 +27,7 @@ xhr.onreadystatechange = () => {
 xhr.open(
   "GET",
   "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
-  true
+  false
 );
 
 xhr.send();
@@ -40,11 +40,13 @@ const prod = (p) => `
 </div>
 `
 
-const home = `<div></div>`
+let home = ``
 
-
+for (let p of products) {
+  home += prod(p);
+}
 
 export default `
 <div>
-  
+  ${home}
 </div>`
