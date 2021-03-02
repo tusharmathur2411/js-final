@@ -3,6 +3,8 @@ let xhr = new XMLHttpRequest()
 const productDiv = (pr) => `
   <img src="${pr["preview"]}" width="50%"/>
   
+  <button onClick="onAdd"
+  
   
 `
 

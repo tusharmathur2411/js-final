@@ -1,14 +1,19 @@
 let xhr = new XMLHttpRequest()
 
- const productDiv = (pr, id) => `
-  <a href="./product.html?${id}">
-    <div class='product' id=${id}>
-      <img src="${pr["preview"]}" width="100%"/>
-      <h4>${pr["name"]}</h4>
-      <h6>${pr["brand"]}</h6>
-      <h6>${pr["price"]}</h6>
-    </div>
-  </a>`
+const cart = localStorage.getItem("cart")
+
+console.log(cart)
+// document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count)
+
+const productDiv = (pr, id) => `
+<a href="./product.html?${id}">
+  <div class='product' id=${id}>
+    <img src="${pr["preview"]}" width="100%"/>
+    <h4>${pr["name"]}</h4>
+    <h6>${pr["brand"]}</h6>
+    <h6>${pr["price"]}</h6>
+  </div>
+</a>`
 
 
 xhr.onreadystatechange = () => {
