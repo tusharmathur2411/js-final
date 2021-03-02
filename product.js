@@ -1,15 +1,6 @@
 let xhr = new XMLHttpRequest()
 
- const productDiv = (pr, id) => `
-  <a href="./product.html?${id}">
-    <div class='product' id=${id}>
-      <img src="${pr["preview"]}" width="100%"/>
-      <h4>${pr["name"]}</h4>
-      <h6>${pr["brand"]}</h6>
-      <h6>${pr["price"]}</h6>
-    </div>
-  </a>`
-
+const id = window.location.search.substr(1)
 
 xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
@@ -36,9 +27,8 @@ xhr.onreadystatechange = () => {
 
 xhr.open(
   "GET",
-  "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
+  "https://5d76bf96515d1a0014085cf9.mockapi.io/product" + id,
   true
 );
 
 xhr.send();
-
