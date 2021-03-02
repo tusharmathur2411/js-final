@@ -1,12 +1,12 @@
 let xhr = new XMLHttpRequest()
 
- const productDiv = (pr, id) => `<div class='product' id=${id}>
-    <div class="prod-main">
-      <img src""
-      <h3>${
-        pr["name"]
-      }</h3>
-    </div>`
+ const productDiv = (pr, id) => `
+  <div class='product' id=${id}>
+    <img src="${pr["preview"]}" width="100%"/>
+    <h4>${pr["name"]}</h4>
+    <h6>${pr["brand"]}</h6>
+    <h6>${pr["price"]}</h6>
+  </div>`
 
 
 xhr.onreadystatechange = () => {
@@ -16,7 +16,7 @@ xhr.onreadystatechange = () => {
     // todos.innerHTML = "";
     const res = JSON.parse(xhr.responseText);
     
-    console.log(res)
+    console.log(res[0])
 
     for (let id in res) {
       if (!res[id]["isAccessory"]) {
@@ -35,7 +35,7 @@ xhr.onreadystatechange = () => {
 xhr.open(
   "GET",
   "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
-  false
+  true
 );
 
 xhr.send();
