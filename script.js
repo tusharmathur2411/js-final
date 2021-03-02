@@ -31,4 +31,12 @@ window.onpopstate = () => {
 }
 
 window.addEventListener('beforeunload', function (e) {
+  const pathname = "/"
+  window.history.pushState(
+    {},
+    pathname,
+    window.location.origin + pathname
+  )
+  rootDiv.innerHTML = routes[pathname];
+  
 });
