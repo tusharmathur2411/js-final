@@ -30,7 +30,7 @@ xhr.send();
 
 const onAdd = () => {
   // product.count = 1
-  const cart = JSON.parse(localStorage.getItem("cart"))
+  let cart = JSON.parse(localStorage.getItem("cart"))
   const current = cart.filter(i => i.id==id)[0]
   if (current===undefined) {
     product.count = 1

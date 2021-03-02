@@ -2,10 +2,11 @@ window.onload = () => {
   let cart = localStorage.getItem("cart");
   localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
   
+  document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
 }
 let xhr = new XMLHttpRequest()
 
-const cart = JSON.parse(localStorage.getItem("cart"))
+// const cart = JSON.parse(localStorage.getItem("cart"))
 // document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count, 0)
 
 const productDiv = (pr, id) => `
