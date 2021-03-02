@@ -3,7 +3,7 @@ let xhr = new XMLHttpRequest()
 const productDiv = (pr) => `
   <img src="${pr["preview"]}" width="50%"/>
   
-  <button onClick="onAdd">Add to Cart</button>
+  <button onClick="onAdd()">Add to Cart</button>
   
 `
 
@@ -31,7 +31,7 @@ xhr.send();
 const onAdd = () => {
   product.count = 1
   const cart = localStorage.getItem("cart")
-  car.push()
-  cart.map(item => item.id===id? {...item, count: item.count=+1}: item)
-  localStorage.setItem("cart", )
+  cart.push(product)
+  // cart.map(item => item.id===id? {...item, count: item.count=+1}: item)
+  localStorage.setItem("cart", cart)
 }
