@@ -1,42 +1,41 @@
-import home from './home.js'
-import cart from './cart.js'
-import product from './product.js'
+let xhr = new XMLHttpRequest()
 
-const navitems = document.getElementsByClassName("navitem")
-
-for (let i = 0; i<navitems.length; i++ ) {
-  navitems[i].addEventListener("click", (e) => {
-    const pathname = e.target.id;
-    window.history.pushState(
-      {},
-      pathname,
-      window.location.origin + pathname
-    )
-    rootDiv.innerHTML = routes[pathname];
-  })
-}
+ const productDiv = () => `<div class='todo ${t["imp"] ? "imp" : ""}' id=${id}>
+    <div class="todo-main">
+      <h2>${
+        t["task"]
+      }
+      <span>ETA: ${t["date"]} ${t["time"]}</span>
+    </div>`
 
 
-const routes = {
-  '/' : home,
-  '/cart' : cart,
-  '/product' : product
+xhr.onreadystatechange = () => {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    let root = document.getElementById("root");
+    // todos.innerHTML = "";
+    const res = JSON.parse(xhr.responseText);
+    
+    console.log(JSON.parse(xhr.responseText))
+
+    for (let id in res) {
+      if (res[id]["imp"] === true) {
+        root.innerHTML += divTodo(res[id], id);
+      }
+    }
+
+    // for (let id in res) {
+    //   if (res[id]["imp"] === false || res[id]["imp"] === undefined) {
+    //     todos.innerHTML += divTodo(res[id], id);
+    //   }
+    // }
+  }
 };
 
-const rootDiv = document.getElementById('root');
-rootDiv.innerHTML = routes[window.location.pathname];
+xhr.open(
+  "GET",
+  "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
+  false
+);
 
-window.onpopstate = () => {
-  rootDiv.innerHTML = routes[window.location.pathname]
-}
+xhr.send();
 
-window.addEventListener('beforeunload', function (e) {
-  const pathname = "/"
-  window.history.pushState(
-    {},
-    pathname,
-    window.location.origin + pathname
-  )
-  rootDiv.innerHTML = routes[pathname];
-  
-});
