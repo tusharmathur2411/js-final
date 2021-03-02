@@ -2,7 +2,6 @@ let xhr = new XMLHttpRequest()
 
 const cart = localStorage.getItem("cart")
 
-console.log(cart)
 // document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count)
 
 const productDiv = (pr, id) => `
@@ -37,7 +36,6 @@ xhr.onreadystatechange = () => {
       }
     }
     
-    const cart = localStorage.setItem("cart", [])
   }
 };
 
