@@ -1,7 +1,7 @@
 let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
-  <img src="${pr["preview"]}" width="50%"/>
+  <img src="${pr["preview"]}" width="30%"/>
   
   <button onClick="onAdd()">Add to Cart</button>
   

@@ -1,7 +1,9 @@
 let xhr = new XMLHttpRequest()
 
-// const cart = localStorage.getItem("cart")
+const cart = JSON.parse(localStorage.getItem("cart"))
 // document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count)
+
+console.log(cart.reduce((a,c) => a+c.count))
 
 const productDiv = (pr, id) => `
 <a href="./product.html?${id}">
