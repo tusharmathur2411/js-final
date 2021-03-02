@@ -5,10 +5,8 @@ import product from './product.js'
 const navitems = document.getElementsByClassName("navitem")
 
 for (let i = 0; i<navitems.length; i++ ) {
-  console.log(navitems[i])
   navitems[i].addEventListener("click", (e) => {
     const pathname = e.target.id;
-    console.log(pathname);
     window.history.pushState(
       {},
       pathname,
@@ -18,7 +16,6 @@ for (let i = 0; i<navitems.length; i++ ) {
   })
 }
 
-console.log(home)
 
 const routes = {
   '/' : home,
@@ -32,3 +29,6 @@ rootDiv.innerHTML = routes[window.location.pathname];
 window.onpopstate = () => {
   rootDiv.innerHTML = routes[window.location.pathname]
 }
+
+window.addEventListener('beforeunload', function (e) {
+});
