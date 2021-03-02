@@ -31,6 +31,8 @@ xhr.onreadystatechange = () => {
         accessories.innerHTML += productDiv(res[id], id);
       }
     }
+    
+    const cart = localStorage.setItem("cart", [])
   }
 };
 
