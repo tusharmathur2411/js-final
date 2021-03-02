@@ -1,3 +1,5 @@
+
+
 let xhr = new XMLHttpRequest()
 
 const cart = JSON.parse(localStorage.getItem("cart"))
@@ -6,8 +8,8 @@ document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count
 console.log(cart)
 
 const productDiv = (pr, id) => `
-<a href="./product.html?${id}">
-  <div class='product' id=${id}>
+<a href="./product.html?${pr.id}">
+  <div class='product' id=${pr.id}>
     <img src="${pr["preview"]}" width="100%"/>
     <h4>${pr["name"]}</h4>
     <h6>${pr["brand"]}</h6>
@@ -36,8 +38,6 @@ xhr.onreadystatechange = () => {
         accessories.innerHTML += productDiv(res[id], id);
       }
     }
-    
-    localStorage.setItem("cart", JSON.stringify([]));
   }
 };
 
