@@ -3,20 +3,20 @@ let xhr = new XMLHttpRequest()
 const productDiv = (pr) => `
   <img src="${pr["preview"]}" width="50%"/>
   
-  <button onClick="onAdd"
-  
+  <button onClick="onAdd">Add to Cart</button>
   
 `
 
 const id = window.location.search.substr(1)
+let product;
 
 xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
-    const res = JSON.parse(xhr.responseText);
+    product = JSON.parse(xhr.responseText);
     
-    console.log(res)
+    console.log(product)
 
-    document.body.innerHTML = productDiv(res);
+    document.body.innerHTML = productDiv(product);
   }
 };
 
@@ -27,3 +27,10 @@ xhr.open(
 );
 
 xhr.send();
+
+const onAdd = () => {
+  product.count = 1
+  const cart = localStorage.getItem("cart")
+  cart.map(item => item.id===id? {...item, count: item.count=+1}: item)
+  localStorage.setItem("cart", )
+}
