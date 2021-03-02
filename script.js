@@ -1,9 +1,9 @@
 let xhr = new XMLHttpRequest()
 
 const cart = JSON.parse(localStorage.getItem("cart"))
-// document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count)
+document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count, 0)
 
-console.log(cart.reduce((a,c) => a+c.count))
+console.log(cart)
 
 const productDiv = (pr, id) => `
 <a href="./product.html?${id}">
@@ -37,7 +37,7 @@ xhr.onreadystatechange = () => {
       }
     }
     
-    localStorage.setItem("cart", JSON.stringify(res.map(i => ({...i, count: 0}))));
+    localStorage.setItem("cart", JSON.stringify([]));
   }
 };
 
