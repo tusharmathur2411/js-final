@@ -1,6 +1,7 @@
 let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
+  <img src="${pr["preview"]}" width="50%"/>
   
   
 `
@@ -14,9 +15,9 @@ xhr.onreadystatechange = () => {
     // todos.innerHTML = "";
     const res = JSON.parse(xhr.responseText);
     
-    console.log(res[0])
+    console.log(res)
 
-    document.body.innerHTML = productDiv(res[id]);
+    document.body.innerHTML = productDiv(res);
   }
 };
 
