@@ -1,12 +1,14 @@
 let xhr = new XMLHttpRequest()
 
  const productDiv = (pr, id) => `
-  <div class='product' id=${id}>
-    <img src="${pr["preview"]}" width="100%"/>
-    <h4>${pr["name"]}</h4>
-    <h6>${pr["brand"]}</h6>
-    <h6>${pr["price"]}</h6>
-  </div>`
+  <a href="./product.html?p=${id}">
+    <div class='product' id=${id}>
+      <img src="${pr["preview"]}" width="100%"/>
+      <h4>${pr["name"]}</h4>
+      <h6>${pr["brand"]}</h6>
+      <h6>${pr["price"]}</h6>
+    </div>
+  </a>`
 
 
 xhr.onreadystatechange = () => {
