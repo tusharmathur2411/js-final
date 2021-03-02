@@ -34,10 +34,17 @@ xhr.send();
 
 console.log(products)
 
-const home = products.map(p => `
+const prod = (p) => `
 <div>
-  ${p.name}
+  <h1>${p.name}</h1>
 </div>
-`)
+`
 
-export default home<h1;
+const home = `<div></div>`
+
+
+
+export default `
+<div>
+  
+</div>`

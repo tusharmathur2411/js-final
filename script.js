@@ -18,6 +18,8 @@ for (let i = 0; i<navitems.length; i++ ) {
   })
 }
 
+console.log(home)
+
 const routes = {
   '/' : home,
   '/cart' : cart,
