@@ -2,6 +2,7 @@ let xhr = new XMLHttpRequest()
 
 // const cart = localStorage.getItem("cart")
 // document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count)
+window.localStorage.setItem("cart", []);
 
 const productDiv = (pr, id) => `
 <a href="./product.html?${id}">
@@ -34,7 +35,6 @@ xhr.onreadystatechange = () => {
         accessories.innerHTML += productDiv(res[id], id);
       }
     }
-  
   }
 };
 

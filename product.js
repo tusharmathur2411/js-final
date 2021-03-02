@@ -30,7 +30,8 @@ xhr.send();
 
 const onAdd = () => {
   product.count = 1
-  const cart = localStorage.getItem("cart")
+  const cart = window.localStorage.getItem("cart")
+  console.log(cart)
   cart.push(product)
   // cart.map(item => item.id===id? {...item, count: item.count=+1}: item)
   localStorage.setItem("cart", cart)
