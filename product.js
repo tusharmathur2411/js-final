@@ -31,8 +31,14 @@ xhr.send();
 const onAdd = () => {
   // product.count = 1
   const cart = JSON.parse(localStorage.getItem("cart"))
-  const current = cart.filter(i => i.id===id)
-  cart.push(product)
+  const current = cart.filter(i => i.id==id)[0]
+  if (current===undefined) {
+    product.count = 1
+    cart.push(product)
+  }
+  else{
+    cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
+  }
   
   console.log(cart)
   localStorage.setItem("cart", JSON.stringify(cart))
