@@ -44,3 +44,4 @@ const onAdd = () => {
   
   localStorage.setItem("cart", JSON.stringify(cart))
 }
+

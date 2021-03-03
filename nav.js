@@ -13,9 +13,11 @@ localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): car
 
 document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
 
-window.onstorage = () => {
+window.addEventListener('storage', () => {
+  
   let cart = localStorage.getItem("cart");
-  localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
+  console.log("storage")
 
   document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
-};
+});
+
