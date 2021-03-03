@@ -1,6 +1,6 @@
 const navbar = `
   <div>
-    <a href="">SHOPLANE</a>
+    <a href="/">SHOPLANE</a>
     <a href="/#clothing-div">Clothing</a>
     <a href="/#accessories-div">Accessories</a>
   </div>
