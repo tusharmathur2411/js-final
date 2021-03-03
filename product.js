@@ -3,15 +3,15 @@ let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
   <div class="pro-div">
-    <img src="${pr["preview"]}" width="30%"/>
+    <img id="main-img" src="${pr["preview"]}" width="30%"/>
     <div>
       <h1>${pr.name}</h1>
       <h3>Description</h3>
       <p>${pr.description}</p>
       <div class="preview">
-        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][0]}" width="100%"/></button>
-        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][1]}" width="100%"/></button>
-        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][2]}" width="100%"/></button>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="100%"/>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="100%"/>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="100%"/>
       </div>
       <button onClick="onAdd()">Add to Cart</button>
     </div>
@@ -55,6 +55,7 @@ const onAdd = () => {
   window.dispatchEvent(new Event("storage"));
 }
 
-const changeImage = () => {
+const changeImage = (ev) => {
   
+  document.getElementById("main-img").src = ev.target.src
 }
