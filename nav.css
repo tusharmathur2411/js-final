@@ -40,9 +40,9 @@ body {
 
 #cart-count{
   position: absolute;
-  top: 30%;
-  right: 0%;
-/*   transform: translate(-50%,-50%) */
+  top: 40%;
+  left: 50%;
+  font-weight: 800;
 }
 
 #main {
@@ -50,3 +50,5 @@ body {
   top: 10vh;
   padding: 3%;
 }
+
+/*   transform: translate(-50%,-50%) */
