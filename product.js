@@ -2,12 +2,11 @@ import navbar from './nav.js'
 
 document.getElementById("navbar").innerHTML = navbar
 
-window.onload = () => {
-  let cart = localStorage.getItem("cart");
-  localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
-  
-  document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
-}
+let cart = localStorage.getItem("cart");
+localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
+
+document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
+
 
 let xhr = new XMLHttpRequest()
 
@@ -17,7 +16,7 @@ const productDiv = (pr) => `
   <button onClick="onAdd()">Add to Cart</button>
   
 `
-
+const mainDiv = document.getElementById("main")
 const id = window.location.search.substr(1)
 let product;
 
@@ -27,7 +26,7 @@ xhr.onreadystatechange = () => {
     
     console.log(product)
 
-    document.body.innerHTML = productDiv(product);
+    mainDiv.innerHTML = productDiv(product);
   }
 };
 
