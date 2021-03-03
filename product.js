@@ -56,6 +56,7 @@ const onAdd = () => {
 }
 
 const changeImage = (ev) => {
-  ev.target.cssstyle.border = "thick solid #0000FF";
+  console.log(ev.target.parentNode.childNodes) 
+    // = "thick solid #000";
   document.getElementById("main-img").src = ev.target.src
 }
