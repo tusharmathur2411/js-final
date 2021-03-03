@@ -21,6 +21,15 @@ setInterval(() => {
   document.getElementById("img-bnr").src = banners[banner_id]
 }, 5000)
 
+const buttons = document.getElementsByClassName("banner-btn")
+
+for (let _ of buttons) {
+  _.addEventListener("click", (ev) => {
+    banner_id = ev.target.id.slice(-1)
+    document.getElementById("img-bnr").src = banners[banner_id]
+  })
+}
+
 xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     let clothing = document.getElementById("clothing");
