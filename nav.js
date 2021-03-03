@@ -16,8 +16,6 @@ document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) 
 window.addEventListener('storage', () => {
   
   let cart = localStorage.getItem("cart");
-  console.log("storage")
-
   document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
 });
 
