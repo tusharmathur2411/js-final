@@ -15,15 +15,16 @@
 .banner-btn {
   width: 12px;
   height: 12px;
-  background-color: grey;
+  background-color: rgb(104,104,104);
   border: none;
   border-radius: 50%;
-  opacity: 30%;
+  opacity: 50%;
   outline:none;
+  margin: 5px;
 }
 
 .banner-btn.curr {
-  opacity: 60%  
+  opacity: 80%  
 }
 
 
@@ -38,7 +39,7 @@
 .banner-btns {
   position: relative;
   display: flex;
-  bottom: 25px;
+  bottom: 6vh;
   justify-content: center;
   align-items: center;
   z-index:1;
