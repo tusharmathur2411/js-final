@@ -13,7 +13,10 @@ const productDiv = (pr, id) => `
   </div>
 </a>`
 
-const banners = ["https://imgur.com/96OnkX7.png", "https://imgur.com/KtGxwnN.png", "https://imgur.com/sfjg9R8.png", "https://imgur.com/p0wdadG.png"];
+const banners = ["https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbanner-img-0.png?v=1614775610309",
+                 "https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbanner-img-1.png?v=1614775711856",
+                 "https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbanner-img-2.png?v=1614775712494",
+                 "https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbanner-img-3.png?v=1614775715032"];
 let banner_id = 0
 
 setInterval(() => {
@@ -25,7 +28,7 @@ const buttons = document.getElementsByClassName("banner-btn")
 
 for (let _ of buttons) {
   _.addEventListener("click", (ev) => {
-    banner_id = ev.target.id.slice(-1)
+    banner_id = parseInt(ev.target.id.slice(-1))
     document.getElementById("img-bnr").src = banners[banner_id]
   })
 }
