@@ -28,6 +28,7 @@ const updateCart = () => {
     mainDiv.innerHTML += `<h4>Total: ${total}</h4>`
   }
   mainDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
+  
 }
 
 const onIncrement = (e) => {
@@ -35,7 +36,7 @@ const onIncrement = (e) => {
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
   localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();
+  window.dispatchEvent(new Event("storage"));
 }
 
 const onDecrement = (e) => {
@@ -44,7 +45,7 @@ const onDecrement = (e) => {
   cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
   cart = cart.filter(i => i.count !== 0)
   localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();  
+  window.dispatchEvent(new Event("storage"));
 }
 
 const onDelete = (e) => {
@@ -52,7 +53,7 @@ const onDelete = (e) => {
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.filter(i => i.count != id)
   localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();  
+  window.dispatchEvent(new Event("storage"));
 }
 
 
@@ -77,3 +78,4 @@ const onDelete = (e) => {
 
 // xhr.send();
 window.onload = updateCart;
+window.onstorage = updateCart;
