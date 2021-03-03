@@ -1,11 +1,4 @@
-import navbar from './nav.js'
 
-document.getElementById("navbar").innerHTML = navbar
-
-let cart = localStorage.getItem("cart");
-localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
-
-document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
 
 
 let xhr = new XMLHttpRequest()

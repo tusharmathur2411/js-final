@@ -1,36 +1,4 @@
-import navbar from './nav.js'
 
-document.getElementById("navbar").innerHTML = navbar
-
-let cart = localStorage.getItem("cart");
-localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
-
-document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
-
-const onIncrement = (e) => {
-  const id = e.target.parentNode.id
-  let cart = JSON.parse(localStorage.getItem("cart"))
-  cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
-  localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();
-}
-
-const onDecrement = (e) => {
-  const id = e.target.parentNode.id
-  let cart = JSON.parse(localStorage.getItem("cart"))
-  cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
-  cart = cart.filter(i => i.count !== 0)
-  localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();  
-}
-
-const onDelete = (e) => {
-  const id = e.target.parentNode.id
-  let cart = JSON.parse(localStorage.getItem("cart"))
-  cart = cart.filter(i => i.count != id)
-  localStorage.setItem("cart", JSON.stringify(cart))
-  updateCart();  
-}
 
 const cartDiv = (pr) => `
   <div id="${pr.id}">
@@ -62,6 +30,30 @@ const updateCart = () => {
   mainDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
 }
 
+const onIncrement = (e) => {
+  const id = e.target.parentNode.id
+  let cart = JSON.parse(localStorage.getItem("cart"))
+  cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
+  localStorage.setItem("cart", JSON.stringify(cart))
+  updateCart();
+}
+
+const onDecrement = (e) => {
+  const id = e.target.parentNode.id
+  let cart = JSON.parse(localStorage.getItem("cart"))
+  cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
+  cart = cart.filter(i => i.count !== 0)
+  localStorage.setItem("cart", JSON.stringify(cart))
+  updateCart();  
+}
+
+const onDelete = (e) => {
+  const id = e.target.parentNode.id
+  let cart = JSON.parse(localStorage.getItem("cart"))
+  cart = cart.filter(i => i.count != id)
+  localStorage.setItem("cart", JSON.stringify(cart))
+  updateCart();  
+}
 
 
 
