@@ -1,6 +1,6 @@
 
 
-const cart = localStorage.getItem("cart")
+const cart = JSON.parse(localStorage.getItem("cart"))
 
 console.log(cart)
 
