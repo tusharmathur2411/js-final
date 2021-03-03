@@ -25,3 +25,22 @@
 .banner-btn.curr {
   opacity: 60%  
 }
+
+
+.banner {
+/*   position: relative; */
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-btns {
+/*   position: absolute; */
+  
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
