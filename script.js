@@ -26,7 +26,7 @@ setInterval(() => {
   banner_id = banner_id===3 ? 0 : banner_id+1;
   document.getElementById("img-bnr").src = banners[banner_id];
   document.getElementById("btn-"+banner_id).classList.add("curr")
-}, 5000)
+}, 3000)
 
 const buttons = document.getElementsByClassName("banner-btn")
 
