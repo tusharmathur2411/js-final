@@ -1,7 +1,10 @@
 const navbar = `
-  <a href="">SHOPLANE</a>
-  <a href="/#clothing-div">Clothing</a>
-  <a href="/#accessories-div">Accessories</a>
+  <div>
+    <a href="">SHOPLANE</a>
+    <a href="/#clothing-div">Clothing</a>
+    <a href="/#accessories-div">Accessories</a>
+  </div>
+  <input type="text" placeholder="Search"/>
   <a href="./cart.html"><img src="https://img.icons8.com/fluent/48/000000/fast-cart.png"/><span id="cart-count"></span></a>
 `
 
