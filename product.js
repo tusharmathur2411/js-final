@@ -8,11 +8,7 @@ const productDiv = (pr) => `
       <h1>${pr.name}</h1>
       <h3>Description</h3>
       <p>${pr.description}</p>
-      <div class="preview">
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/>
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/>
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/>
-      </div>
+      <div class="preview"><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/></div>
       <button onClick="onAdd()">Add to Cart</button>
     </div>
   </div>
