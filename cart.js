@@ -5,8 +5,9 @@
 const cartDiv = (pr) => `
   <div id="${pr.id}">
    <img src="${pr["preview"]}" width="20%"/><br/>
+   <button onClick="onDelete(event)>Delete</button>
    <span>${pr["name"]}</span><br/>
-   <button onClick="onDecrement(event)">-</button>
+   <button onClick="onDecrement(event)">${pr.count===1?"Remove":"-"}</button>
      <span id="item-count-${pr.id}">${pr["count"]}</span> 
    <button onClick="onIncrement(event)">+</button><br/>
    <span>Amount: ${pr["price"] * pr["count"]}</span>
@@ -44,6 +45,14 @@ const onDecrement = (e) => {
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
   cart = cart.filter(i => i.count !== 0)
+  localStorage.setItem("cart", JSON.stringify(cart))
+  updateCart();  
+}
+
+const onDelete = (e) => {
+  const id = e.target.parentNode.id
+  let cart = JSON.parse(localStorage.getItem("cart"))
+  cart = cart.filter(i => i.count != id)
   localStorage.setItem("cart", JSON.stringify(cart))
   updateCart();  
 }
