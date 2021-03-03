@@ -1,3 +1,7 @@
+import navbar from './nav.js'
+
+
+
 window.onload = () => {
   let cart = localStorage.getItem("cart");
   localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
@@ -6,8 +10,6 @@ window.onload = () => {
 }
 let xhr = new XMLHttpRequest()
 
-// const cart = JSON.parse(localStorage.getItem("cart"))
-// document.getElementById("cart-count").innerText = cart.reduce((a,c) => a+c.count, 0)
 
 const productDiv = (pr, id) => `
 <a href="./product.html?${pr.id}">
@@ -24,7 +26,6 @@ xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     let clothing = document.getElementById("clothing");
     let accessories = document.getElementById("accessories");
-    // todos.innerHTML = "";
     const res = JSON.parse(xhr.responseText);
     
     console.log(res[0])
