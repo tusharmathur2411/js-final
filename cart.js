@@ -15,14 +15,20 @@ const cartDiv = (pr) => `
 
 const updateCart = () => {
   const mainDiv = document.body
-  mainDiv.innerHTML = ''  
+  mainDiv.innerHTML = ''
   const cart = JSON.parse(localStorage.getItem("cart"))
-  let total = 0
-  for (let pr of cart){
-    mainDiv.innerHTML += cartDiv(pr);
-    total += (pr["price"] * pr["count"])
+  if (cart.length===0) {
+    mainDiv.innerHTML = 'Cart is empty.'    
   }
-  mainDiv.innerHTML += `<h4>Total: ${total}</h4>`
+  else{
+    let total = 0
+    for (let pr of cart){
+      mainDiv.innerHTML += cartDiv(pr);
+      total += (pr["price"] * pr["count"])
+    }
+    mainDiv.innerHTML += `<h4>Total: ${total}</h4>`
+  }
+  mainDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
 }
 
 const onIncrement = (e) => {
@@ -36,7 +42,8 @@ const onIncrement = (e) => {
 const onDecrement = (e) => {
   const id = e.target.parentNode.id
   let cart = JSON.parse(localStorage.getItem("cart"))
-  cart = cart.map(i => (i.id==id ? {...i, count: i.count-1} : i))
+  cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
+  cart = cart.filter(i => i.count !== 0)
   localStorage.setItem("cart", JSON.stringify(cart))
   updateCart();  
 }
