@@ -49,6 +49,7 @@ const onDecrement = (e) => {
 }
 
 const onDelete = (e) => {
+  console.log("del")
   const id = e.target.parentNode.id
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.filter(i => i.count != id)

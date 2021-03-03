@@ -1,4 +1,3 @@
-
 let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
@@ -8,7 +7,7 @@ const productDiv = (pr) => `
       <h1>${pr.name}</h1>
       <h3>Description</h3>
       <p>${pr.description}</p>
-      <div class="preview"><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/></div>
+      <div class="preview"><img class="preview-btn" style="border: thick solid #000" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/></div>
       <button onClick="onAdd()">Add to Cart</button>
     </div>
   </div>
@@ -52,7 +51,9 @@ const onAdd = () => {
 }
 
 const changeImage = (ev) => {
-  console.log(ev.target.parentNode.childNodes) 
-    // = "thick solid #000";
+  for (let _ of ev.target.parentNode.childNodes) {
+    _.style.border = ""
+  }
+  ev.target.style.border = "thick solid #000";
   document.getElementById("main-img").src = ev.target.src
 }
