@@ -14,8 +14,12 @@ const productDiv = (pr, id) => `
 </a>`
 
 const banners = ["https://imgur.com/96OnkX7.png", "https://imgur.com/KtGxwnN.png", "https://imgur.com/sfjg9R8.png", "https://imgur.com/p0wdadG.png"];
+let banner_id = 0
 
-setInterval(() => {document.getElementById("img-bnr").src = banners[0]}, 5000)
+setInterval(() => {
+  banner_id = banner_id===3 ? 0 : banner_id+1;
+  document.getElementById("img-bnr").src = banners[banner_id]
+}, 5000)
 
 xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
