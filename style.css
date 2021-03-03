@@ -13,10 +13,10 @@
 }
 
 .banner-btn {
-  maxwidth: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: grey;
   border: none;
   border-radius: 50%;
-  
+  opacity: 60%  
 }
