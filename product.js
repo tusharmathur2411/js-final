@@ -9,9 +9,9 @@ const productDiv = (pr) => `
       <h3>Description</h3>
       <p>${pr.description}</p>
       <div class="preview">
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="100%"/>
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="100%"/>
-        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="100%"/>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/>
+        <img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/>
       </div>
       <button onClick="onAdd()">Add to Cart</button>
     </div>
@@ -56,6 +56,6 @@ const onAdd = () => {
 }
 
 const changeImage = (ev) => {
-  
+  ev.target.cssstyle.border = "thick solid #0000FF";
   document.getElementById("main-img").src = ev.target.src
 }
