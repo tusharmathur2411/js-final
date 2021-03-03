@@ -1,6 +1,13 @@
+import navbar from './nav.js'
 
+document.getElementById("navbar").innerHTML = navbar
 
-// console.log(cart)
+window.onload = () => {
+  let cart = localStorage.getItem("cart");
+  localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
+  
+  document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0)
+}
 
 const cartDiv = (pr) => `
   <div id="${pr.id}">
