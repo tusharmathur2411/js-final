@@ -27,8 +27,7 @@
 }
 
 
-.banner {
-/*   position: relative; */
+.banner {  
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -37,10 +36,10 @@
 }
 
 .banner-btns {
-/*   position: absolute; */
-  
-  
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  bottom: 25px;
+  justify-content: center;
   align-items: center;
+  z-index:1;
 }
