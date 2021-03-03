@@ -4,9 +4,15 @@
 let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
-  <img src="${pr["preview"]}" width="30%"/>
-  
-  <button onClick="onAdd()">Add to Cart</button>
+  <div>
+    <img src="${pr["preview"]}" width="30%"/>
+    <div>
+      <h3>${pr.name}</h3>
+      <h6>Description</h6>
+      <p>${pr.description}</p>
+      <button onClick="onAdd()">Add to Cart</button>
+    </div>
+  </div>
   
 `
 const mainDiv = document.getElementById("main")
