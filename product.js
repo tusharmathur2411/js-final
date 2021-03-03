@@ -39,6 +39,5 @@ const onAdd = () => {
     cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
   }
   
-  console.log(cart)
   localStorage.setItem("cart", JSON.stringify(cart))
 }
