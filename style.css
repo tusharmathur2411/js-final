@@ -18,5 +18,10 @@
   background-color: grey;
   border: none;
   border-radius: 50%;
+  opacity: 30%;
+  outline:none;
+}
+
+.banner-btn.curr {
   opacity: 60%  
 }
