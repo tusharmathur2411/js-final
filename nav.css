@@ -1,0 +1,28 @@
+body {
+  margin: 0
+}
+
+#navbar {
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  z-index: 2;
+  
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  position: absolute;
+  top: 10vh;
+  
+}
