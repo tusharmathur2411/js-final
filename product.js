@@ -1,15 +1,18 @@
 
-
-
 let xhr = new XMLHttpRequest()
 
 const productDiv = (pr) => `
-  <div>
+  <div class="pro-div">
     <img src="${pr["preview"]}" width="30%"/>
     <div>
-      <h3>${pr.name}</h3>
-      <h6>Description</h6>
+      <h1>${pr.name}</h1>
+      <h3>Description</h3>
       <p>${pr.description}</p>
+      <div class="preview">
+        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][0]}" width="100%"/></button>
+        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][1]}" width="100%"/></button>
+        <button class="preview-btn" onClick="changeImage()"><img src="${pr["photos"][2]}" width="100%"/></button>
+      </div>
       <button onClick="onAdd()">Add to Cart</button>
     </div>
   </div>
@@ -52,3 +55,6 @@ const onAdd = () => {
   window.dispatchEvent(new Event("storage"));
 }
 
+const changeImage = () => {
+  
+}
