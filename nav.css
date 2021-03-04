@@ -17,7 +17,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-image: url("https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbackground.jpg?v=1614856977104");
+  background-size: cover;
+/*   background-color: black; */
   color: orange;
   z-index: 2;
 }
@@ -46,7 +48,7 @@ body {
 #navbar a:first-of-type {
   font-size: 40px;
   font-family: "";
-  color: white;
+  color: black;
 }
 
 #navbar input {
