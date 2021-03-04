@@ -37,6 +37,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 5vw;
 }
 
 #navbar input {
@@ -47,10 +48,10 @@ body {
 
 #cart-count{
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
-  font-weight: 800;
-  font-size: 15px;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 #main {
