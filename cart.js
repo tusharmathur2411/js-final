@@ -2,7 +2,7 @@
 
 const cartDiv = (pr) => `
   <div class="cart-product" id="${pr.id}">
-   <img src="${pr["preview"]}" width="20%"/><br/>
+   <img src="${pr["preview"]}" height="100%"/><br/>
    <div>
      <h2>${pr["name"]}</h2>
      <h4>Amount: ${pr["price"] * pr["count"]}</h4>
