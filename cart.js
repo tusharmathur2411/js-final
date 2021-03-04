@@ -34,7 +34,7 @@ const updateCart = () => {
 }
 
 const onIncrement = (e) => {
-  const id = e.target.parentNode.id
+  const id = e.target.parentNode.parentNode.id
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.map(i => (i.id==id? {...i, count: i.count+1} : i))
   localStorage.setItem("cart", JSON.stringify(cart))
@@ -42,7 +42,7 @@ const onIncrement = (e) => {
 }
 
 const onDecrement = (e) => {
-  const id = e.target.parentNode.id
+  const id = e.target.parentNode.parentNode.id
   let cart = JSON.parse(localStorage.getItem("cart"))
   cart = cart.map(i => (i.id==id? {...i, count: i.count-1} : i))
   cart = cart.filter(i => i.count !== 0)
