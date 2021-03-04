@@ -3,7 +3,7 @@
 const cartDiv = (pr) => `
   <div class="cart-product" id="${pr.id}">
    <img src="${pr["preview"]}" height="100%"/><br/>
-   <div>
+   <div class="cart-product-desc">
      <h2>${pr["name"]}</h2>
      <h4>Amount: ${pr["price"] * pr["count"]}</h4>
      <button onClick="onDecrement(event)">${pr.count===1?"Remove":"-"}</button>
