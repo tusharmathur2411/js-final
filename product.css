@@ -13,6 +13,14 @@
 }
 
 .add-btn {
+  margin-top: 5vh;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.add-btn > button {
+  background-color: blue;
+  width: 20%;
+  height: 100%
 }
