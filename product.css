@@ -20,11 +20,16 @@
 }
 
 .add-btn > button {
-  background-color: blue;
+  background-color: #406eb8;
   color: white;
   font-weight: 800;
   width: 20%;
-  height: 5vh;
+  height: 7vh;
   border: none;
-  border-radius: 5px
+  border-radius: 5px;
+  outline: none
+}
+
+#price {
+  color: orange
 }
