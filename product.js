@@ -3,12 +3,12 @@ let xhr = new XMLHttpRequest()
 const productDiv = (pr) => `
   <div class="pro-div">
     <img id="main-img" src="${pr["preview"]}" width="30%"/>
-    <div>
+    <div class="desc-div">
       <h1>${pr.name}</h1>
       <h3>Description</h3>
       <p>${pr.description}</p>
       <div class="preview"><img class="preview-btn" style="border: thick solid #000" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/></div>
-      <button onClick="onAdd()">Add to Cart</button>
+      <button class="add-btn" onClick="onAdd()">Add to Cart</button>
     </div>
   </div>
   
