@@ -1,6 +1,6 @@
 .cart-product {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 30vh
 }
