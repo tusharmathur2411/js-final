@@ -65,9 +65,12 @@ body {
   position: absolute;
   top: 35%;
   left: 50%;
+  font-family: "Audiowide", sans-serif;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
+/*   #ffbb5c; */
+  
 }
 
 #main {
