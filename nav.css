@@ -31,13 +31,12 @@ body {
 #navbar a {
   position: relative;
   font-size: 25px;
-  color: orange;
+  color: #ffa159;
   font-weight: 800;
   text-decoration: none;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 5vw;
 }
 
 #navbar input {
