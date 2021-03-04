@@ -1,14 +1,16 @@
 
 
 const cartDiv = (pr) => `
-  <div id="${pr.id}">
+  <div class="cart-product" id="${pr.id}">
    <img src="${pr["preview"]}" width="20%"/><br/>
+   <div>
+     <span>${pr["name"]}</span><br/>
+     <span>Amount: ${pr["price"] * pr["count"]}</span>     
+     <button onClick="onDecrement(event)">${pr.count===1?"Remove":"-"}</button>
+       <span id="item-count-${pr.id}">${pr["count"]}</span> 
+     <button onClick="onIncrement(event)">+</button><br/>
+   </div>
    <button onClick="onDelete(event)">Delete</button>
-   <span>${pr["name"]}</span><br/>
-   <button onClick="onDecrement(event)">${pr.count===1?"Remove":"-"}</button>
-     <span id="item-count-${pr.id}">${pr["count"]}</span> 
-   <button onClick="onIncrement(event)">+</button><br/>
-   <span>Amount: ${pr["price"] * pr["count"]}</span>
   </div>
  `
 
