@@ -4,16 +4,20 @@
 
 body {
   margin: 0;
-  background-image: url("https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbackground.jpg?v=1614856977104");
-  background-size: cover;
+/*   background-image: url("https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbackground.jpg?v=1614856977104"); */
 /*   background-color: #e0d6c8; */
+  background: url(https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbackground.jpg?v=1614856977104) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #navbar {
   position: fixed;
   top:0;
   width: 100%;
-  height: 10vh;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -63,7 +67,7 @@ body {
   left: 50%;
   font-weight: 900;
   font-size: 18px;
-  color: #ffbb5c;
+  color: black;
 }
 
 #main {
