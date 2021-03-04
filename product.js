@@ -8,7 +8,7 @@ const productDiv = (pr) => `
       <h3>Description</h3>
       <p>${pr.description}</p>
       <div class="preview"><img class="preview-btn" style="border: thick solid #000" onClick="changeImage(event)" src="${pr["photos"][0]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="20%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="20%"/></div>
-      <button class="add-btn" onClick="onAdd()">Add to Cart</button>
+      <div class="add-btn"><button onClick="onAdd()">Add to Cart</button></div>
     </div>
   </div>
   
