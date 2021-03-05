@@ -1,6 +1,7 @@
 .cart-product {
   display: flex;
   padding: 1vw;
+  margin-top: 2vw;
   padding-right: 2vw;  
   align-items: center;
   justify-content: space-between;
@@ -38,7 +39,7 @@
 
 #main-flex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 #right {
@@ -46,5 +47,5 @@
 }
 
 #main {
-  width: 60%;
+  width: 50%;
 }
