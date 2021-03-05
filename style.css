@@ -7,12 +7,8 @@
 .product-card {
   width: 15%;
   padding: 1%;
-/*   background-image: url("https://cdn.glitch.com/cb384e5b-ed54-40c9-81c9-952d70798b31%2Fbackground.jpg?v=1614856977104"); */
   background-image: linear-gradient(to bottom right, #f7d1a8, #ffce99, #ffe5c9);
   box-shadow: 0 2px 5px #ccc;
-/*   background-size: cover; */
-/*   background-color: #dff7f7; */
-/*   border: 2px solid black; */
   color: black;
   text-decoration: none
 }
