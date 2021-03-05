@@ -16,7 +16,9 @@ const cartDiv = (pr) => `
 
 const updateCart = () => {
   const mainDiv = document.getElementById("main")
+  const rightDiv = document.getElementById("right")
   mainDiv.innerHTML = ''
+  rightDiv.innerHTML = ''
   const cart = JSON.parse(localStorage.getItem("cart"))
   if (cart.length===0) {
     mainDiv.innerHTML = 'Cart is empty.'    
@@ -27,9 +29,9 @@ const updateCart = () => {
       mainDiv.innerHTML += cartDiv(pr);
       total += (pr["price"] * pr["count"])
     }
-    mainDiv.innerHTML += `<h4>Total: ${total}</h4>`
+    rightDiv.innerHTML += `<h4>Total: ${total}</h4>`
   }
-  mainDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
+  rightDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
   
 }
 
@@ -59,7 +61,6 @@ const onDelete = (e) => {
 }
 
 
-
 // const id = window.location.search.substr(1)
 
 // xhr.onreadystatechange = () => {
@@ -79,5 +80,6 @@ const onDelete = (e) => {
 // );
 
 // xhr.send();
+
 window.onload = updateCart;
 window.onstorage = updateCart;
