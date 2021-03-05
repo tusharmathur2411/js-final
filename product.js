@@ -14,8 +14,8 @@ const productDiv = (pr) => `
       </div>
     </div>
   </div>
-  
 `
+
 const mainDiv = document.getElementById("main")
 const id = window.location.search.substr(1)
 let product;
