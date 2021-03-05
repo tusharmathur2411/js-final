@@ -10,7 +10,7 @@ const cartDiv = (pr) => `
        <span id="item-count-${pr.id}">${pr["count"]}</span> 
      <button onClick="onIncrement(event)">+</button><br/>
    </div>
-   <button onClick="onDelete(event)">Delete</button>
+   <button onClick="onDelete(event)">DELETE</button>
   </div>
  `
 
