@@ -85,7 +85,7 @@ body {
   justify-content: space-evenly;
   top: 20vh;
   width: 100%;
-  background-color: black;
+  background-color: #43474d;
 }
 
 #footer > div {
@@ -99,6 +99,10 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: left;
+}
+
+#main {
+  min-height: 70vh;
 }
 
 
