@@ -83,7 +83,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  top: 100vh;
+  top: 20vh;
   width: 100%;
   background-color: black;
 }

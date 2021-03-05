@@ -37,7 +37,7 @@ const footer = `<div>
 </div>`
 
 document.getElementById("navbar").innerHTML = navbar;
-// document.getElementById("footer").innerHTML = footer;
+document.getElementById("footer").innerHTML = footer;
 
 let cart = localStorage.getItem("cart");
 localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
