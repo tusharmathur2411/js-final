@@ -17,21 +17,21 @@ const cartDiv = (pr) => `
 const updateCart = () => {
   const mainDiv = document.getElementById("main")
   const rightDiv = document.getElementById("right")
-  let mainDivHTML = ""
   mainDiv.innerHTML = ''
   rightDiv.innerHTML = ''
   const cart = JSON.parse(localStorage.getItem("cart"))
   if (cart.length===0) {
-    mainDiv.innerHTML = 'Cart is empty.'    
+    mainDiv.innerHTML = '<h1>Cart is empty.<h1>'
   }
   else{
     let total = 0
+    mainDiv.innerHTML = `<h3>Total Items: ${cart.length}</h3>`
     for (let pr of cart){
-      mainDivHTML += cartDiv(pr);
+      mainDiv.innerHTML += cartDiv(pr);
       total += (pr["price"] * pr["count"])
     }
-    mainDiv.innerHTML += `<h4>Total: ${total}</h4>`
-    mainDiv.innerHTML += mainDivHTML
+    rightDiv.innerHTML += `<h3>Total Amount: ${total}</h3>`
+    rightDiv.innerHTML += '<a href="./confirmation.html"><button>Place Order</button></a>'
   }
   rightDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
   
