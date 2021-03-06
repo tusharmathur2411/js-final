@@ -56,8 +56,8 @@
   width: 50%;
   max-height: 100vh;
   overflow: auto;
-  padding-left: 10vw;
-  padding-right: 10vw;
+/*   padding-left: 3vw; */
+  padding-right: 3vw;
 }
 
 #right button {
@@ -71,4 +71,13 @@
   border: none;
   border-radius: 5px;
   outline: none
+}
+
+#empty {
+  width: 100%;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

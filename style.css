@@ -5,8 +5,8 @@
 }
 
 .product-card {
-  width: 15%;
-  padding: 1%;
+  width: 18%;
+/*   padding: 1%; */
   background-image: linear-gradient(to bottom right, #f7d1a8, #ffce99, #ffe5c9);
   box-shadow: 0 2px 5px #ccc;
   color: black;

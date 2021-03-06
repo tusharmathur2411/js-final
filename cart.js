@@ -21,7 +21,7 @@ const updateCart = () => {
   rightDiv.innerHTML = ''
   const cart = JSON.parse(localStorage.getItem("cart"))
   if (cart.length===0) {
-    mainDiv.innerHTML = '<h1>Cart is empty.<h1>'
+    mainDiv.innerHTML = '<div id="empty"><h1>Cart is empty. Add Items Now.</h1></div>'
   }
   else{
     let total = 0
