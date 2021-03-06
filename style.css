@@ -15,6 +15,8 @@
 .product-card-desc {
   padding-left: 20px;
   padding-right: 20px;
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 3px;
 }
 
 .banner-btn {

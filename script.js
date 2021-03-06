@@ -9,7 +9,7 @@ const productDiv = (pr, id) => `
   <div class="product-card-desc" id=${pr.id}>
     <h4>${pr["name"]}</h4>
     <h6>${pr["brand"]}</h6>
-    <h6>${pr["price"]}</h6>
+    <h6 class="price">Rs. ${pr["price"]}</h6>
   </div>
 </a>`
 
