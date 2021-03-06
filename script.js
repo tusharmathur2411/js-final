@@ -8,7 +8,7 @@ const productDiv = (pr, id) => `
   <img src="${pr["preview"]}" width="100%"/>
   <div class="product-card-desc" id=${pr.id}>
     <h4>${pr["name"]}</h4>
-    <h6>${pr["brand"]}</h6>
+    <h6 class="brand">${pr["brand"]}</h6>
     <h6 class="price">Rs. ${pr["price"]}</h6>
   </div>
 </a>`

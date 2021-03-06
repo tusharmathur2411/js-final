@@ -14,9 +14,25 @@
 
 .product-card-desc {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 15px;
   font-family: "Audiowide", sans-serif;
-  letter-spacing: 3px;
+  
+}
+
+.product-card-desc > h4{
+  font-weight: 800;
+  font-size: 18px
+}
+
+.brand {
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: grey
+}
+
+.price {
+  font-size: 17px;
+  color: #ff992b;
 }
 
 .banner-btn {

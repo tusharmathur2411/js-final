@@ -5,7 +5,7 @@ const productDiv = (pr) => `
     <img id="main-img" src="${pr["preview"]}" width="30%"/>
     <div class="desc-div">
       <h1>${pr.name}</h1>
-      <h3 id="price">${pr.price}</h3>
+      <h3 id="price">Price: Rs. ${pr.price}</h3>
       <h3>Description</h3>
       <p>${pr.description}</p>
       <div class="preview"><img class="preview-btn" style="border: thick solid #000" onClick="changeImage(event)" src="${pr["photos"][0]}" width="17%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][1]}" width="17%"/><img class="preview-btn" onClick="changeImage(event)" src="${pr["photos"][2]}" width="17%"/></div>

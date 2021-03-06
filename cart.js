@@ -31,9 +31,9 @@ const updateCart = () => {
       total += (pr["price"] * pr["count"])
     }
     rightDiv.innerHTML += `<h2>Total Amount: ${total}</h2>`
-    rightDiv.innerHTML += '<button onClick="placeOrder()">Place Order</button>'
+    rightDiv.innerHTML += '<button onClick="placeOrder()">Place Order</button> <b>OR</b>'
   }
-  rightDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
+  rightDiv.innerHTML += `<a href="/"><button>Add${cart.length?" more " : " "}Items</button></a>`
   
 }
 
