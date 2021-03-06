@@ -54,15 +54,14 @@ const placeOrder = () => {
 //     true
 //   );
 
-//   xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, access-control-allow-origin, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-
-//   xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
 //   xhr.send(localStorage.getItem("cart"));
   $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', localStorage.getItem("cart"), function(res) {
-            console.log(res)
+      console.log(res);
+      
   })
+  window.location.href = "./confirmation.html";
+  localStorage.setItem("cart", JSON.parse([]))
   
-  // window.location.href = "./confirmation.html";
 }
 
 const onIncrement = (e) => {
