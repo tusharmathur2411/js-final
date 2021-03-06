@@ -63,13 +63,15 @@ body {
 
 #cart-count {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   font-family: "Audiowide", sans-serif;
   font-weight: 900;
   font-size: 16px;
   color: black;
-/*   #ffbb5c; */  
+/*   #ffbb5c; */
+  transform: translate(-50%,-50%);
+  
 }
 
 #main {
@@ -103,3 +105,6 @@ body {
 #main {
   min-height: 70vh;
 }
+
+
+  
