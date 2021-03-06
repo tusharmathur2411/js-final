@@ -31,10 +31,14 @@ const updateCart = () => {
       total += (pr["price"] * pr["count"])
     }
     rightDiv.innerHTML += `<h3>Total Amount: ${total}</h3>`
-    rightDiv.innerHTML += '<a href="./confirmation.html"><button>Place Order</button></a>'
+    rightDiv.innerHTML += '<button onClick="placeOrder()">Place Order</button>'
   }
   rightDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
   
+}
+
+const placeOrder = () => {
+  window.location.href = "./confirmation.html";
 }
 
 const onIncrement = (e) => {
