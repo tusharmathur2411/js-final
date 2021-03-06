@@ -69,8 +69,7 @@ body {
   font-weight: 900;
   font-size: 16px;
   color: black;
-/*   #ffbb5c; */
-  
+/*   #ffbb5c; */  
 }
 
 #main {
@@ -104,6 +103,3 @@ body {
 #main {
   min-height: 70vh;
 }
-
-
-/*   transform: translate(-50%,-50%) */
