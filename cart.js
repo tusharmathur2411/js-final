@@ -40,8 +40,6 @@ const updateCart = () => {
 const placeOrder = () => {
   let xhr = new XMLHttpRequest();
   
-  xhr.setReq
-  
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       const res = JSON.parse(xhr.responseText);
@@ -55,6 +53,11 @@ const placeOrder = () => {
     "https://5d76bf96515d1a0014085cf9.mockapi.io/order",
     true
   );
+  
+  // xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
+  xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin");
+  xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+  
 
   xhr.send(localStorage.getItem("cart"));
   
