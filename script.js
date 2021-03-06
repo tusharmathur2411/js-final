@@ -5,8 +5,8 @@ let xhr = new XMLHttpRequest()
 
 const productDiv = (pr, id) => `
 <a class='product-card' href="./product.html?${pr.id}">
-  <div id=${pr.id}>
-    <img src="${pr["preview"]}" width="100%"/>
+  <img src="${pr["preview"]}" width="100%"/>
+  <div class="product-card-desc" id=${pr.id}>
     <h4>${pr["name"]}</h4>
     <h6>${pr["brand"]}</h6>
     <h6>${pr["price"]}</h6>
