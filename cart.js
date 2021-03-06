@@ -15,7 +15,7 @@ const cartDiv = (pr) => `
  `
 
 const updateCart = () => {
-  const mainDiv = document.getElementById("main")
+  const mainDiv = document.getElementById("left")
   const rightDiv = document.getElementById("right")
   mainDiv.innerHTML = ''
   rightDiv.innerHTML = ''
