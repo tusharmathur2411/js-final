@@ -48,17 +48,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-right: 10vw;
 }
 
 #main {
   width: 50%;
+  max-height: 100vh;
+  overflow: auto;
 }
+
+/* #main::-webkit-scrollbar {
+  width: 10px; 
+} */
 
 #right button {
   background-color: #406eb8;
   color: white;
   font-weight: 800;
-/*   width: 20%; */
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 5vh;
   height: 7vh;
   border: none;
   border-radius: 5px;

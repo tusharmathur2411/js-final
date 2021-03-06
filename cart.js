@@ -30,7 +30,7 @@ const updateCart = () => {
       mainDiv.innerHTML += cartDiv(pr);
       total += (pr["price"] * pr["count"])
     }
-    rightDiv.innerHTML += `<h3>Total Amount: ${total}</h3>`
+    rightDiv.innerHTML += `<h2>Total Amount: ${total}</h2>`
     rightDiv.innerHTML += '<button onClick="placeOrder()">Place Order</button>'
   }
   rightDiv.innerHTML += '<a href="/"><button>Continue Shopping</button></a>'
