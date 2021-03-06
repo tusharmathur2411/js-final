@@ -97,7 +97,7 @@ body {
   top: 20vh;
   width: 100%;
   background-color: #43474d;
-  padding-bottom: 5vh;
+  padding-bottom: 3vh;
 }
 
 #footer > div {
@@ -111,6 +111,11 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: left;
+  font-family: "Audiowide", sans-serif;
+}
+
+#footer > div > p {
+  font-weight: 900;
 }
 
 #main {

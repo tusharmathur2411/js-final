@@ -8,32 +8,32 @@ const navbar = `
   <a id="cart-icon" href="./cart.html"><img src="https://img.icons8.com/fluent/48/000000/fast-cart.png"/><span id="cart-count"></span></a>
 `
 const footer = `<div>
-	<p class="footer-heading">Online Store</p>
-	<a href="/" class="footer-link">Men Clothing</a>
-	<a href="/" class="footer-link">Women Clothing</a>
-	<a href="/" class="footer-link">Men Accessories</a>
-	<a href="/" class="footer-link">Women Accessories</a>
+	<p>Online Store</p>
+	<a href="/">Men Clothing</a>
+	<a href="/">Women Clothing</a>
+	<a href="/">Men Accessories</a>
+	<a href="/">Women Accessories</a>
 </div>
 <div>
-	<p class="footer-heading">Helpful Links</p>
-	<a href="/" class="footer-link">Home</a>
-	<a href="/" class="footer-link">About</a>
-	<a href="/" class="footer-link">Contact</a>
+	<p>Helpful Links</p>
+	<a href="/">Home</a>
+	<a href="/">About</a>
+	<a href="/">Contact</a>
 </div>
 <div>
-	<p class="footer-heading">Partners</p>
-	<a href="/" class="footer-link">Zara</a>
-	<a href="/" class="footer-link">Pantaloons</a>
-	<a href="/" class="footer-link">Levis</a>
-	<a href="/" class="footer-link">UCB</a>
-	<a href="/" class="footer-link">+ Many More</a>
+  <p>Partners</p>
+	<a href="/">Zara</a>
+	<a href="/">Pantaloons</a>
+	<a href="/">Levis</a>
+	<a href="/">UCB</a>
+	<a href="/">+ Many More</a>
 </div>
 <div>
-	<p class="footer-heading">Address</p>
-	<p href="/" class="footer-link">Building 101</p>
-	<p href="/" class="footer-link">Central Avenue</p>
-	<p href="/" class="footer-link">LA - 902722</p>
-	<p href="/" class="footer-link">United States</p>
+	<p>Address</p>
+	<p href="/">Building 101</p>
+	<p href="/">Central Avenue</p>
+	<p href="/">LA - 902722</p>
+	<p href="/">United States</p>
 </div>`
 
 document.getElementById("navbar").innerHTML = navbar;
