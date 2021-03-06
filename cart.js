@@ -53,12 +53,6 @@ const placeOrder = () => {
     "https://5d76bf96515d1a0014085cf9.mockapi.io/order",
     true
   );
-  
-  // xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
-  xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-  xhr.setRequestHeader('Access-Control-Request-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  xhr.setRequestHeader("Access-Control-Request-Origin", "*");
-  
 
   xhr.send(localStorage.getItem("cart"));
   
