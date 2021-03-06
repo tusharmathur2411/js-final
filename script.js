@@ -43,7 +43,7 @@ xhr.onreadystatechange = () => {
     let accessories = document.getElementById("accessories");
     const res = JSON.parse(xhr.responseText);
     
-    console.log(res[0])
+    // console.log(res[0])
 
     for (let id in res) {
       if (!res[id]["isAccessory"]) {

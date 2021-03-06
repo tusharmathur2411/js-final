@@ -44,8 +44,8 @@ const placeOrder = () => {
 //     if (xhr.readyState == 4 && xhr.status == 200) {
 //       const res = JSON.parse(xhr.responseText);
 
-          // localStorage.setItem("cart", JSON.stringify([]));
-          // window.location.href = "./confirmation.html";
+//       localStorage.setItem("cart", JSON.stringify([]));
+//       window.location.href = "./confirmation.html";
       
 //     }
 //   };

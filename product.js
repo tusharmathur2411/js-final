@@ -24,7 +24,7 @@ xhr.onreadystatechange = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     product = JSON.parse(xhr.responseText);
     
-    console.log(product)
+    // console.log(product)
 
     mainDiv.innerHTML = productDiv(product);
   }
