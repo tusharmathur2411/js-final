@@ -55,7 +55,7 @@ const placeOrder = () => {
   );
   
   // xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
-  xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin");
+  xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, Access-Control-Request-Headers");
   xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
   
 
