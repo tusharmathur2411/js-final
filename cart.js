@@ -38,23 +38,29 @@ const updateCart = () => {
 }
 
 const placeOrder = () => {
-  let xhr = new XMLHttpRequest();
+//   let xhr = new XMLHttpRequest();
   
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      const res = JSON.parse(xhr.responseText);
-      console.log(res)
+//   xhr.onreadystatechange = () => {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       const res = JSON.parse(xhr.responseText);
+//       console.log(res)
       
-    }
-  };
+//     }
+//   };
 
-  xhr.open(
-    "POST",
-    "https://5d76bf96515d1a0014085cf9.mockapi.io/order",
-    true
-  );
+//   xhr.open(
+//     "POST",
+//     "https://5d76bf96515d1a0014085cf9.mockapi.io/order",
+//     true
+//   );
 
-  xhr.send(localStorage.getItem("cart"));
+//   xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, access-control-allow-origin, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
+//   xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+//   xhr.send(localStorage.getItem("cart"));
+  $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', dataObj, function() {
+            alert('Order Placed Successfully')
+  }
   
   // window.location.href = "./confirmation.html";
 }
