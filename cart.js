@@ -55,8 +55,9 @@ const placeOrder = () => {
   );
   
   // xhr.setRequestHeader('Access-Control-Allow-Credentials', true);
-  xhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, Access-Control-Request-Headers");
-  xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+  xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+  xhr.setRequestHeader('Access-Control-Request-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  xhr.setRequestHeader("Access-Control-Request-Origin", "*");
   
 
   xhr.send(localStorage.getItem("cart"));
