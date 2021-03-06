@@ -59,9 +59,8 @@ const placeOrder = () => {
       console.log(res);
       
   })
+  localStorage.setItem("cart", JSON.stringify([]));
   window.location.href = "./confirmation.html";
-  localStorage.setItem("cart", JSON.parse([]))
-  
 }
 
 const onIncrement = (e) => {
