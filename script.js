@@ -1,5 +1,3 @@
-
-
 let xhr = new XMLHttpRequest()
 
 
