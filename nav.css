@@ -75,15 +75,22 @@ body {
 
 #cart-count {
   position: absolute;
-  top: 50%;
-  left: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30%;
+  left: 90%;
   font-family: "Audiowide", sans-serif;
   font-weight: 900;
   font-size: 16px;
   color: black;
   transform: translate(-50%,-50%);
   background-color: white;
-/*   height: 10px; */
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
   
 }
 

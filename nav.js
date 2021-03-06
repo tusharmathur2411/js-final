@@ -5,7 +5,7 @@ const navbar = `
     <a href="/#accessories-div">Accessories</a>
   </div>
   </i><input type="text" placeholder="Search"/>
-  <a href="./cart.html"><img src="https://img.icons8.com/fluent/48/000000/fast-cart.png"/><span id="cart-count"></span></a>
+  <a id="cart-icon" href="./cart.html"><img src="https://img.icons8.com/fluent/48/000000/fast-cart.png"/></a>
 `
 const footer = `<div>
 	<p class="footer-heading">Online Store</p>
@@ -42,11 +42,15 @@ document.getElementById("footer").innerHTML = footer;
 let cart = localStorage.getItem("cart");
 localStorage.setItem("cart", (cart===null || cart===""?  JSON.stringify([]): cart));
 
-document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0) || ""
+// document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0) || ""
+
+const crt=  JSON.parse(cart).reduce((a,v) => (a+v.count),0)
+document.getElementById("cart-icon").innerHTML =  crt? <span id="cart-count"></span>: ""
 
 window.addEventListener('storage', () => {
   
   let cart = localStorage.getItem("cart");
-  document.getElementById("cart-count").innerText = JSON.parse(cart).reduce((a,v) => (a+v.count),0) || ""
+  const crt=  JSON.parse(cart).reduce((a,v) => (a+v.count),0)
+  document.getElementById("cart-icon").innerHTML =  crt? <span id="cart-count"></span>: ""
 });
 
